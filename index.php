@@ -10,6 +10,11 @@
 	<meta name="author" content="fizzvr">
 	<link rel="shortcut icon" href="act/ico/favicon.png">
 	<title>www/vr-php1 | Vladimir Rodríguez</title>
+	<!-- html shiv y respond -->
+	<!-- [if lt IE 9]>
+		<script src="act/js/html5shiv.js"></script>
+		<script src="act/js/respond.min.js" ></script>
+	<![endif] -->
 </head>
 <body>
 
