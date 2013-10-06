@@ -21,5 +21,9 @@
 			$this->conexion = new mysqli(self::$db_servidor,self::$db_usuario,
 				self::$db_clave,$this->$db_nombre);
 		}
+		// desconectar de la BD
+		private function cerrar_conexion() {
+			$this->conexion->close();
+		}
 	}
 ?>
