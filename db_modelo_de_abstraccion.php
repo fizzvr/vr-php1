@@ -31,6 +31,15 @@
 			$this->conexion->consulta($this->consulta);
 			$this->cerrar_conexion();
 		}
+		// traer resultados de una consulta en un array
+		protected function devolver_resultados_de_la_consulta() {
+			$this->abrir_conexion;
+			$resultado = $this->conexion->consulta($this->consulta);
+			while ($this->filas[] = $resultado->fetch_assoc());
+			$resultado->close();
+			$this->cerrar_conexion();
+			array_pop($this->filas);
+		}
 
 	}
 ?>
