@@ -25,5 +25,12 @@
 		private function cerrar_conexion() {
 			$this->conexion->close();
 		}
+		// ejecutar un query simple del tipo INSERT, DELETE, UPDATE
+		protected function ejecutar_consulta_simple() {
+			$this->abrir_conexion();
+			$this->conexion->consulta($this->consulta);
+			$this->cerrar_conexion();
+		}
+
 	}
 ?>
