@@ -39,9 +39,11 @@
 		}
 
 		public function edit($user_data=array()) {
+
 			foreach ($user_data as $campo=>$valor):
 				$$campo = $valor;
 			endforeach;
+
 			$this->consulta = "
 				update 	usuarios
 				set 	nombre='$nombre',

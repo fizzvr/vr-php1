@@ -19,7 +19,6 @@
 		private function abrir_conexion() {
 			$this->conexion = new mysqli(self::$db_servidor,self::$db_usuario,
 				self::$db_clave, $this->db_nombre);
-
 		}
 		// desconectar de la BD
 		private function cerrar_conexion() {
@@ -35,7 +34,6 @@
 		protected function devolver_resultados_de_la_consulta() {
 			$this->abrir_conexion();
 			$resultado = $this->conexion->query($this->consulta);
-
 			while ($this->filas[] = $resultado->fetch_assoc());
 			$resultado->close();
 			$this->cerrar_conexion();
