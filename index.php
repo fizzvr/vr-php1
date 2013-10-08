@@ -51,6 +51,15 @@
 	$usuario3->get($modificar_usuario['email']);
 	print $usuario3->nombre." ".$usuario3->apellido." a sido modificado<br>";
 
+	//eliminando usuarios
+	$usuario4 = new usuario();
+	$usuario4->get("alw2ma222");
+	$usuario4->delete("alw2ma222");
+	echo $usuario4->nombre." + ".$usuario4->apellido." a sido eliminado" ;
+
+
+
+
 
 ?>
 </body>
