@@ -39,6 +39,17 @@
 	$usuario2->get($datos_del_usuario['email']);
 	print $usuario2->nombre.' '.$usuario2->apellido.' ha sido creado<br>';
 
+	// editar los datos de un usuario existente
+	$modificar_usuario = array(
+		'nombre'=>'Vr',
+		'apellido'=>'Fizz',
+		'email'=>'user@email.com',
+		'clave'=>'123'
+		);
+	$usuario3 = new Usuario();
+	$usuario3->edit($modificar_usuario);
+	$usuario3->get($modificar_usuario['email']);
+	print $usuario3->nombre." ".$usuario3->apellido." a sido modificado<br>";
 
 
 ?>
