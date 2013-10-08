@@ -14,12 +14,12 @@
 		abstract protected function edit();
 		abstract protected function delete();
 
-		/*los siguientes metodos pueden definirse con exactitud
-		y no son abstractos*/
+		// los siguientes metodos pueden definirse con exactitud y no son abstractos
 		// Conectar con la BD
 		private function abrir_conexion() {
 			$this->conexion = new mysqli(self::$db_servidor,self::$db_usuario,
-				self::$db_clave,$this->$db_nombre);
+				self::$db_clave, $this->db_nombre);
+
 		}
 		// desconectar de la BD
 		private function cerrar_conexion() {
@@ -28,17 +28,19 @@
 		// ejecutar un query simple del tipo INSERT, DELETE, UPDATE
 		protected function ejecutar_consulta_simple() {
 			$this->abrir_conexion();
-			$this->conexion->consulta($this->consulta);
+			$this->conexion->query($this->consulta);
 			$this->cerrar_conexion();
 		}
 		// traer resultados de una consulta en un array
 		protected function devolver_resultados_de_la_consulta() {
-			$this->abrir_conexion;
-			$resultado = $this->conexion->consulta($this->consulta);
+			$this->abrir_conexion();
+			$resultado = $this->conexion->query($this->consulta);
+
 			while ($this->filas[] = $resultado->fetch_assoc());
 			$resultado->close();
 			$this->cerrar_conexion();
 			array_pop($this->filas);
+
 		}
 
 	}
