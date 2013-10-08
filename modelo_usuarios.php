@@ -1,6 +1,6 @@
 <?php
 	require_once("db_modelo_de_abstraccion.php");
-	class usuario extends DBModeloAbstraccion {
+	class Usuario extends DBModeloAbstraccion {
 		public $nombre;
 		public $apellido;
 		public $email;
@@ -12,8 +12,8 @@
 
 		}
 
-		public function get($user_email="") {
-			if ($user_email != ""):
+		public function get($user_email='') {
+			if ($user_email != ''):
 				$this->consulta ="Select id, nombre, apellido, email, clave from usuarios where email ='$user_email'; ";
 				$this->devolver_resultados_de_la_consulta();
 			endif;
@@ -32,7 +32,7 @@
 					foreach ($user_data as $campo=>$valor):
 						$$campo = $valor;
 					endforeach;
-					$this->consulta = "insert into usuarios (nombre,apellido,email,clave) values ('$nombre,'$apellido','$email','$clave') ";
+					$this->consulta = "insert into usuarios (nombre,apellido,email,clave) values ('$nombre','$apellido','$email','$clave') ";
 					$this->ejecutar_consulta_simple();
 				endif;
 			endif;
