@@ -7,6 +7,7 @@
 		protected $consulta;
 		protected $filas = array();
 		private $conexion;
+		public $mensaje = "Hecho";
 
 		// metodos abstractos para ABM de clases que ereden
 		abstract protected function get();
@@ -26,9 +27,13 @@
 		}
 		// ejecutar un query simple del tipo INSERT, DELETE, UPDATE
 		protected function ejecutar_consulta_simple() {
-			$this->abrir_conexion();
-			$this->conexion->query($this->consulta);
-			$this->cerrar_conexion();
+			if ($_POST) {
+				$this->abrir_conexion();
+				$this->conexion->query($this->consulta);
+				$this->cerrar_conexion();
+			} else {
+				$this->mensaje = "Método no permitido";
+			}
 		}
 		// traer resultados de una consulta en un array
 		protected function devolver_resultados_de_la_consulta() {
