@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="es">
+<head>
+	<!-- meta estandar -->
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" >
+	<!-- propiedades del sitio -->
+	<!-- excluyo 3 propiedades: descripcion,keywords,author -->
+	<link rel="shortcut icon" href="/vr-php1/out/act/ico/favicon.png">
+	<title>ABM de Usuarios {subtitulo} | Vladimir Rodríguez</title>
+
+	<!-- soporte para IE8 xD -->
+	<!-- [if lt IE 9]>
+		<script src="../act/js/html5shiv.js"></script>
+		<script src="../act/js/respond.min.js" ></script>
+	<![endif] -->
+
+	<!-- recursos -->
+	<!-- <link rel="stylesheet" href="../bs3/css/bootstrap.min.css">
+	<link rel="stylesheet" href="../cvr/cssvr.css"> -->
+	<link rel="stylesheet" href="/vr-php1/out/bs3/css/bootstrap.min.css">
+	<link rel="stylesheet" href="/vr-php1/out/cvr/cssvr.css">
+</head>
+<body>
+	<div id="cabezera">
+		<h1>Administrador de Usuarios</h1>
+		<h2>{subtitulo}</h2>
+	</div>
+	<div id="menu">
+		<a href="/vr-php1/{VIEW_SET_USER}" title="Nuevo Usuario">Agregar Usuario</a>
+		<a href="/vr-php1/{VIEW_GET_USER}" title="Buscar Usuario">Buscar/Editar Usuario</a>
+		<a href="/vr-php1/{VIEW_DELETE_USER}" title="Eliminar Usuario">Eliminar Usuario</a>
+	</div>
+	<div id="mensaje">
+		{mensaje}
+	</div>
+	<div id="formulario">
+		{formulario}
+	</div>
+</body>
+</html>
