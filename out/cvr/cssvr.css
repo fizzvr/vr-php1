@@ -5,24 +5,29 @@ body
 	font-family:  sans-serif;
 	font-size: 16px;
 }
-
+h1
+{
+	background-color: #6699FF;
+	color: #fff;
+	margin: 0 0 20px 0;
+}
 #cabezera
 {
 	padding: 6px 6px 8px 6px;
 	background-color: #6699FF;
-	color: #ffffff;
+	color: #fff;
 }
 
 #cabezera h1, h2
 {
-	margin: 0px;
+	margin: 0;
 }
 
 #menu
 {
 	background-color: #000;
 	color: #fff;
-	padding: 4px 0px;
+	padding: 4px 0;
 }
 
 #menu a
@@ -39,58 +44,71 @@ body
 #menu a:hover
 {
 	background-color: #6699FF;
-	color: #fff;
+
 }
-/*aki me quedo*/
-#mensaje {
-margin: 20px;
-border: 1px solid #990033;
-background-color: #f4f4f4;
-padding: 8px;
-color: #990033;
-font-size: 15px;
-font-weight: bold;
-text-align: justify;
+#mensaje
+{
+	margin: 20px;
+	border: 1px solid #c0c0c0;
+	background-color: #f4f4f4;
+	padding: 8px;
+	color: red;
+	font-size: 15px;
+	font-weight: bold;
+	text-align: right;
 }
-#formulario {
-margin: 0px 20px 10px 20px;
-border: 1px solid #c0c0c0;
-background-color: #f9f9f9;
-padding: 8px;
-text-align: left;
+
+#formulario
+{
+	margin: 0 20px 10px 20px;
+	border: 1px solid #c0c0c0;
+	background-color: #f9f9f9;
+	padding: 8px;
+	text-align: left;
+	color: blue;
 }
-.item_requerid {
-width: 150px;
-height: 22px;
-padding-right: 4px;
-font-weight: bold;
-float: left;
-clear: left;
-text-align: right;
+
+.item_required
+{
+	width: 150px;
+	height: 22px;
+	padding-right: 4px;
+	font-weight: bold;
+	float: left;
+	clear: left;
+	text-align: right;
+
 }
-.form_requerid {
-height: 22px;
-float: left;
-clear: right;
+.form_required
+{
+	height: 22px;
+	float: left;
+	clear: right;
 }
-input {
-border: 1px solid #c0c0c0;
+
+input
+{
+	border: 2px dotted #c0c0c0;
 }
-.form_button {
-padding-top: 15px;
-margin-left: 154px;
-clear: both;
+
+.form_button
+{
+	padding-top: 15px;
+	margin: 154px;
+	clear: both;
+
 }
-#enviar {
-padding: 5px 10px 5px 10px;
-border: 2px solid #ffffff;
-background-color: #000000;
-color: #ffffff;
-font-family: sans-serif;
-font-size: 14px;
-font-weight: bold;
-cursor: pointer;
+
+#enviar
+{
+	padding: 5px 10px;
+	border: 2px solid #fff;
+	background-color: #000;
+	color: #f4f4f4;
+
+
 }
-#enviar:hover {
-background-color: #6699FF;
+#enviar :hover
+{
+	background-color: #6699FF;
 }

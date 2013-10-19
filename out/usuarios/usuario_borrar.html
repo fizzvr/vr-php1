@@ -1,12 +1,36 @@
-<!-- formulario para eliminar un usuario identificando por su e-mail -->
-<form action="{DELETE}" id="alta_usuario" method="POST" >
-	<div class="item_required">
-		E-Mail
-	</div>
-	<div class="form_required">
-		<input type="text" name="email" id="email">
-	</div>
-	<div class="form_button">
-		<input type="submit" name="enviar" id="enviar" value="Eliminar">
-	</div>
-</form>
+<!doctype html>
+<html lang="es">
+<head>
+	<!-- meta estandar -->
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" >
+	<!-- propiedades del sitio -->
+	<link rel="shortcut icon" href="/vr-php1/out/act/ico/favicon.png">
+	<title>ABM de Usuarios {subtitulo} | Vladimir Rodríguez</title>
+
+	<!-- soporte para IE8 xD -->
+	<!-- [if lt IE 9]>
+		<script src="../act/js/html5shiv.js"></script>
+		<script src="../act/js/respond.min.js" ></script>
+	<![endif] -->
+
+	<!-- recursos -->
+	<link rel="stylesheet" href="/vr-php1/out/bs3/css/bootstrap.min.css">
+	<link rel="stylesheet" href="/vr-php1/out/cvr/cssvr.css">
+</head>
+	<body>
+		<h1>Borrar Usuario</h1>
+		<!-- formulario para eliminar un usuario identificando por su e-mail -->
+		<form action="{DELETE}" id="alta_usuario" method="POST" >
+			<div class="item_required">
+				E-Mail
+			</div>
+			<div class="form_required">
+				<input type="text" name="email" id="email">
+			</div>
+			<div class="form_button">
+				<input type="submit" name="enviar" id="enviar" value="Eliminar">
+			</div>
+		</form>
+	</body>
+</html>
