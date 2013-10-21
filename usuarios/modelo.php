@@ -8,11 +8,7 @@
 		public $email;
 		private $clave;
 		protected $id;
-		// Método constructor
-		function __construct() {
-			$this->db_nombre = "book_example";
 
-		}
 		// Métodos Propios
 		// Traer datos de un  usuario
 		public function get($user_email='') {
@@ -72,7 +68,11 @@
 			$this->ejecutar_consulta_simple();
 			$this->mensaje = "Usuario eliminado";
 		}
+		// Método constructor
+		function __construct() {
+			$this->db_nombre = "book_example";
 
+		}
 		public function __destruct() {
 			unset($this);
 		}
