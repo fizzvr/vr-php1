@@ -12,23 +12,28 @@
 		// Métodos Propios
 		// Traer datos de un  usuario
 		public function get($user_email='') {
+
 			if ($user_email != ''){
 				$this->consulta ="Select id, nombre, apellido, email, clave from usuarios where email ='$user_email'; ";
-				$this->devolver_resultados_de_la_consulta();
-			}
 
+				$this->devolver_resultados_de_la_consulta();
+
+			}
 			if (count($this->filas) == 1){
 				foreach ($this->filas[0] as $propiedad=>$valor){
 					$this->$propiedad = $valor;
 				}
 				$this->mensaje = "Usuario encontrado";
+
 			} else {
-				$this->mensaje ="Usuarios no encontrado";
+				$this->mensaje ="Usuario no encontrado";
 			}
+
 		}
 
 		// Crear un nuevo usuario
 		public function set($user_data=array()) {
+
 			if(array_key_exists('email', $user_data)){
 				$this->get($user_data['email']);
 				if($user_data['email'] != $this->email){
@@ -37,7 +42,7 @@
 					}
 					$this->consulta = "insert into usuarios (nombre,apellido,email,clave) values ('$nombre','$apellido','$email','$clave') ";
 					$this->ejecutar_consulta_simple();
-					$this->mensaje = "Usuario agregado exitosamente";
+					$this->mensaje = "Usuario agregado correctamente";
 				} else {
 					$this->mensaje = "Usuario ya existe";
 				}
@@ -54,12 +59,11 @@
 			$this->consulta = "
 				update 	usuarios
 				set 	nombre='$nombre',
-						apellido='$apellido',
-						clave='$clave'
+						apellido='$apellido'
 				where 	email='$email'
 			";
 			$this->ejecutar_consulta_simple();
-			$this->mensaje ="Usuario modificado";
+			$this->mensaje ="Usuario modificado correctamente";
 		}
 
 		// eliminar un usuario

@@ -41,19 +41,17 @@ function render_dinamic_data($html, $data) {
 
 }
 function retornar_vista($vista , $data=array()) {
+	d($data);
 	global $diccionario;
 	$html = get_template('template');
-	$html = str_replace('{subtitulo}', $diccionario['subtitle'][$vista], $html, $count2);
-	$html = str_replace('{formulario}', get_template($vista), $html, $countx);
-
+	$html = str_replace('{subtitulo}', $diccionario['subtitle'][$vista], $html);
+	$html = str_replace('{formulario}', get_template($vista), $html);
 	$html = render_dinamic_data($html, $diccionario['form_actions']);
 	$html = render_dinamic_data($html, $diccionario['links_menu']);
-	// d($html);
-
 	$html = render_dinamic_data($html, $data);
-d($data);
+
 	//render (mensaje)
-	/*if (array_key_exists('nombre', $data)&&array_key_exists('apellido', $data)&&$vista==VIEW_GET_USER) {
+	if (array_key_exists('nombre', $data) && array_key_exists('apellido', $data) && $vista==VIEW_EDIT_USER) {
 		$mensaje = 'Editar usuario '.$data['nombre'].' '.$data['apellido'];
 	} else {
 		if (array_key_exists('mensaje', $data)) {
@@ -62,7 +60,7 @@ d($data);
 			$mensaje = "Datos del usuario";
 		}
 	}
-	$html = str_replace('{mensaje}', $mensaje, $html);*/
+	$html = str_replace('{mensaje}', $mensaje, $html);
 	print $html;
 
 }
