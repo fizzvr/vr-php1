@@ -74,7 +74,7 @@
 		}
 		// Método constructor
 		function __construct() {
-			$this->db_nombre = "book_example";
+			$this->db_nombre = "vr-php1";
 
 		}
 		public function __destruct() {
