@@ -1,5 +1,4 @@
 <?php
-require '../kint/Kint.class.php';
 require_once('constantes.php');
 require_once('modelo.php');
 require_once('vista.php');
