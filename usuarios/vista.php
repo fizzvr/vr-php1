@@ -41,7 +41,6 @@ function render_dinamic_data($html, $data) {
 
 }
 function retornar_vista($vista , $data=array()) {
-	d($data);
 	global $diccionario;
 	$html = get_template('template');
 	$html = str_replace('{subtitulo}', $diccionario['subtitle'][$vista], $html);
